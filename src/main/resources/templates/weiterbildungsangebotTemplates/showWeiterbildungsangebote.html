@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weiterbildungsangebote</title>
+</head>
+
+<body>
+    <h1>Weiterbildungsangebote</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Titel</th>
+                <th>Beschreibung</th>
+                <th>Teilnahmegebühr</th>
+                <th>Dozent</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="weiterbildungsangebot : ${weiterbildungsangebote}">
+                <tr>
+                    <td th:text="${weiterbildungsangebot.titel}"></td>
+                    <td th:text="${weiterbildungsangebot.beschreibung}"></td>
+                    <td th:text="${weiterbildungsangebot.teilnahmegebuhr} + '€'"></td>
+                    <td th:text="${weiterbildungsangebot.dozent.vorname} + ' ' + ${weiterbildungsangebot.dozent.nachname}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <br>
+    <a href="/weiterbildungsangebotTemplates/addWeiterbildungsangebotForm">Neues Angebot hinzufügen</a>
+    <a href="/">Homepage</a>
+</body>
+
+</html>

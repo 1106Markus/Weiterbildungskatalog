@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Weiterbildungskatalog</title>
+	</head>
+	<body>
+		<h1>Weiterbildungskatalog</h1>
+		
+		<table>
+        <thead>
+            <tr>
+				<th>Operation</th>
+                <th>Dozent*innen</th>
+                <th>Weiterbildungsangebote</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Anzeigen</td>
+                <td><a href="/dozentTemplates/showDozenten">Dozent*innen anzeigen</a></td>
+                <td><a href="/weiterbildungsangebotTemplates/showWeiterbildungsangebote">Weiterbildungsangebote anzeigen</a></td>
+            </tr>
+            <tr>
+                <td>Hinzufüen</td>
+                <td><a href="/dozentTemplates/newDozentForm">Dozent*in anlegen</a></td>
+                <td><a href="/weiterbildungsangebotTemplates/addWeiterbildungsangebotForm">Weiterbildungsangebot hinzufügen</a></td>
+            </tr>
+            <tr>
+                <td>Updaten</td>
+                <td><a href="/dozentTemplates/updateDozentAuswahl">Dozent*in updaten</a></td>
+                <td><a href="/weiterbildungsangebotTemplates/updateWeiterbildungsangebotAuswahl">Weiterbildungsangebot updaten</a></td>
+            </tr>
+            <tr>
+                <td>Löschen</td>
+                <td><a href="/dozentTemplates/deleteDozent">Dozent*in entfernen</a></td>
+                <td><a href="/weiterbildungsangebotTemplates/deleteWeiterbildungsangebot">Weiterbildungsangebot entfernen</a></td>
+            </tr>
+        </tbody>
+    </table>
+	</body>
+</html>

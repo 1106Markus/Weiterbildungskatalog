@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Dozent auswählen</title>
+</head>
+
+<body>
+	<h1>Weiterbildungsangebot auswählen</h1>
+	<form th:action="@{/weiterbildungsangebotTemplates/updateWeiterbildungsangebotForm}" method="get">
+		<select name="angebotID">
+			<option value="">Bitte wählen</option>
+			<th:block th:each="weiterbildungsangebot : ${weiterbildungsangebote}">
+				<option th:value="${weiterbildungsangebot.angebotID}" th:text="${weiterbildungsangebot.titel} + ' bei ' + ${weiterbildungsangebot.getDozent().getVorname() + ' ' + weiterbildungsangebot.getDozent().getNachname()}"></option>
+			</th:block>
+		</select>
+		<br><br>
+		<button type="submit">Auswählen</button>
+	</form>
+	<a href="/">Homepage</a>
+</body>
+
+</html>

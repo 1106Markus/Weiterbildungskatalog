@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Weiterbildungsangebot hinzufügen</title>
+</head>
+
+<body>
+	<h1>Weiterbildungsangebot hinzufügen</h1>
+
+	<form action="#" th:action="@{/weiterbildungsangebotTemplates/addWeiterbildungsangebot}" th:object="${weiterbildungsangebot}" method="post">
+		<p>
+			<label>Titel:</label><br />
+			<input type="text" th:field="*{titel}" required />
+		</p>
+		<p>
+			<label>Beschreibung:</label><br />
+			<input type="text" th:field="*{beschreibung}" required />
+		</p>
+		<p>
+			<label>Teilnahmegebühr:</label><br />
+			<input type="number" name="teilnahmegebuhr" min="0" value="0" step="any" th:field="*{teilnahmegebuhr}" required />
+		</p>
+		
+		<label>Dozent*in:</label><br />
+		<select th:field="*{dozent}" required>
+            <option value="">Bitte wählen</option>
+            <th:block th:each="dozent : ${dozentList}">
+                <option th:value="${dozent.getDozentID}" th:text="${dozent.vorname} + ' ' + ${dozent.nachname}"></option>
+            </th:block>
+        </select><br />
+
+		<button type="submit">Speichern</button>
+		<br />
+		<br />
+		<a href="/">Homepage</a>
+	</form>
+
+</body>
+
+</html>

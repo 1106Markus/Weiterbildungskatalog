@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Weiterbildungsangebot entfernen</title>
+</head>
+
+<body>
+	<h1>Weiterbildungsangebot entfernen</h1>
+	<form th:action="@{/weiterbildungsangebotTemplates/deleteWeiterbildungsangebot}" method="post">
+		<label for="weiterbildungsangebotSelect">Weiterbildungsangebot auswählen:</label>
+		<select name="angebotID" id="weiterbildungsangebotSelect">
+			<option value="">Bitte auswählen</option>
+			<th:block th:each="weiterbildungsangebot : ${weiterbildungsangebote}">
+				<option th:value="${weiterbildungsangebot.angebotID}" th:text="${weiterbildungsangebot.titel + ' mit ' + weiterbildungsangebot.getDozent().getVorname() + ' ' + weiterbildungsangebot.getDozent().getNachname()}"></option>
+			</th:block>
+		</select>
+		<br>
+		<button type="submit">Löschen</button>
+	</form>
+	
+	<a href="/">Homepage</a>
+</body>
+
+</html>

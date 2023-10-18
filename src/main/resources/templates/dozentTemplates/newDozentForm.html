@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Neuen Dozenten hinzufügen</title>
+</head>
+<body>
+<h1>Neuen Dozenten hinzufügen</h1>
+<form action="#" th:action="@{/dozentTemplates/dozentSpeichern}" th:object="${dozent}" method="post">
+    <p>
+        <label>Vorname:</label><br/>
+        <input type="text" th:field="*{vorname}" required/>
+    </p>
+    <p>
+        <label>Nachname:</label><br/>
+        <input type="text" th:field="*{nachname}" required/>
+    </p>
+    <button type="submit">Speichern</button>
+    <br/>
+    <br/>
+    <a href="/">Homepage</a>
+</form>
+</body>
+</html>

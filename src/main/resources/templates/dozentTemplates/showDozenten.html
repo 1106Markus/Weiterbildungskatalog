@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dozenten anzeigen</title>
+</head>
+<body>
+    <h1>Liste der Dozenten</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Weiterbildungsangebote</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="dozent : ${dozenten}">
+                <td th:text="${dozent.vorname}"></td>
+                <td th:text="${dozent.nachname}"></td>
+                <td>
+                    <ul>
+                        <li th:each="wb : ${dozent.weiterbildungsangebote}" th:text="${wb.titel} + ' (' + ${wb.teilnahmegebuhr} + ' €)'"></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/">Homepage</a>
+</body>
+</html>

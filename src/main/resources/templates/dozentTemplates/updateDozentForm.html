@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Update Dozent*in</title>
+</head>
+
+<body>
+	<form th:action="@{/dozentTemplates/updateDozentForm/{dozentID}(dozentID=${dozent.dozentID})}" method="post" th:object="${dozent}">
+		<label for="vorname">Vorname:</label>
+		<input type="text" th:field="*{vorname}" required/><br />
+
+		<label for="nachname">Nachname:</label>
+		<input type="text" th:field="*{nachname}" required/><br />
+
+		<button type="submit">Dozent aktualisieren</button>
+	</form>
+	<a href="/dozentTemplates/updateDozentAuswahl">Zurück zur Auswahl</a>
+	<br/>
+	<a href="/">Homepage</a>
+</body>
+
+</html>

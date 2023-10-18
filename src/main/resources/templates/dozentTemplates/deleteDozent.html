@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Dozenten entfernen</title>
+</head>
+
+<body>
+	<h1>Dozenten entfernen</h1>
+	<form th:action="@{/dozentTemplates/deleteDozent}" method="post">
+		<label for="dozentSelect">Dozent auswählen:</label>
+		<select name="dozentID" id="dozentSelect">
+			<option value="">Bitte auswählen</option>
+			<th:block th:each="dozent : ${dozentList}">
+				<option th:value="${dozent.dozentID}" th:text="${dozent.vorname + ' ' + dozent.nachname}"></option>
+			</th:block>
+		</select>
+		<br>
+		<button type="submit">Löschen</button>
+	</form>
+	
+	<a href="/">Homepage</a>
+</body>
+
+</html>

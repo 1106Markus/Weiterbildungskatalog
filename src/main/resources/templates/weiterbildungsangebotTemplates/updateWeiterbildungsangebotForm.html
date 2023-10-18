@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Update Weiterbildungsangebot</title>
+</head>
+
+<body>
+	<form
+		th:action="@{/weiterbildungsangebotTemplates/updateWeiterbildungsangebotForm/{angebotID}(angebotID=${weiterbildungsangebot.angebotID})}"
+		method="post" th:object="${weiterbildungsangebot}">
+		<label for="titel">Titel:</label>
+		<input type="text" th:field="*{titel}" required/><br />
+
+		<label for="beschreibung">Beschreibung:</label>
+		<input type="text" th:field="*{beschreibung}" required/><br />
+
+		<label for="teilnahmegebur">Teilnahmegebühr:</label>
+		<input type="text" th:field="*{teilnahmegebuhr}" required/><br />
+
+		<label>Dozent*in:</label><br />
+		<select th:field="*{dozent}" required>
+			<option value="">Bitte wählen</option>
+			<th:block th:each="dozent : ${dozentList}">
+				<option th:value="${dozent.getDozentID}" th:text="${dozent.vorname} + ' ' + ${dozent.nachname}">
+				</option>
+			</th:block>
+		</select><br />
+
+		<button type="submit">Weiterbildungsangebot aktualisieren</button>
+	</form>
+	<a href="/weiterbildungsangebotTemplates/updateWeiterbildungsangebotAuswahl">Zurück zur Auswahl</a>
+	<br />
+	<a href="/">Homepage</a>
+</body>
+
+</html>

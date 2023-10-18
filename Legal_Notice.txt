@@ -1,0 +1,38 @@
+LEGAL NOTICE
+
+	This project contains a software solution and serves as an examination performance of a written exam at a university.
+	
+	The project was developed using the software listed below.
+	
+	
+	[Apache Maven 3.8.6] The Apache Software Foundation (2023): „Apache Maven“. (Version 3.8.6). 
+		Online available at URL: https://archive.apache.org/dist/maven/maven-3/3.8.6, accessed 2023-MAR-20. 
+		[License: Apache 2.0 License, License URL: https://www.apache.org/licenses/LICENSE-2.0].
+		
+	[Apache Tomcat 9.0.58] The Apache Software Foundation (2023): „Apache Tomcat®“. (Version 9.0.58). 
+		Online available at URL: https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.58/, accessed 2023-MAR-20. 
+		[License: Apache License, Version 2.0, License-URL: https://www.apache.org/licenses/LICENSE-2.0].
+		
+	[Java 17.0.6] Oracle Corporation (2023): "Java(TM) Platform, Standard Edition Development Kit ( JDK(TM) ). Java(TM) SE Runtime Environment". (Version 17.0.6). 
+		Online available at URL:     https://www.oracle.com/java/technologies/downloads/#javasejdk, accessed 2023-MAR-20. 
+		[License: Oracle No-Fee Terms and Conditions (NFTC), License-URL: https://www.oracle.com/downloads/licenses/no-fee-license.html]. 
+		
+	[PostgreSQL 14.5] The PostgreSQL Global Development Group: „PostgreSQL“. (Version 14.5). 
+		Online available at EDB Enterprise DB at URL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads, accessed 2023-MAR-20. 
+		[License: PostgreSQL License, URL: https://www.postgresql.org/about/licence/].
+		
+	[Spring Boot 3.0.3] The Spring Team / VMware, Inc. or its affiliates (2023): „Spring Boot“. Version 3.0.3. 
+		Online available at URL: https://github.com/spring-projects/spring-boot, accessed 2023-MAR-20. 
+		[License: Apache 2.0 License, License URL: https://github.com/spring-projects/spring-boot/blob/main/LICENSE.txt].
+		
+	[Spring Boot Maven Plugin 3.0.3] VMware, Inc. (2023): „Spring Boot Maven Plugin“. Version 3.0.3. 
+		Online available at URL: https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-maven-plugin/3.0.3, accessed 2023-MAR-20. 
+		[License: Apache 2.0 License, License URL: https://www.apache.org/licenses/LICENSE-2.0].
+		
+	[Spring Tool Suite 4.17.1] VMware, Inc. (2023): „Spring Tool Suite 4“. (Version 4.17.1). 
+		Online available at URL: https://spring.io/tools, accessed 2023-MAR-20. 
+		[License: Apache License, Version 2.0, URL: https://github.com/spring-projects/spring-framework/blob/main/LICENSE.txt].
+		
+	[Thymeleaf 3.1.1] The Thymeleaf Team (2023): „Thymeleaf“ Version 3.1.1. 
+		Online available at URL: https://www.thymeleaf.org/download.html, accessed 2023-MAR-20. 
+		[License: Apache 2.0 License, License URL: https://www.apache.org/licenses/LICENSE-2.0.html].
